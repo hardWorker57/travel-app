@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --prime: #8DD3BB;
+    --light-prime: #CDEAE1;
+    --gray :#FAFBFC;
+}
+body {
+    margin: 0;
+}
+input {
+    outline: none;
+}
+hr {
+    color: gray;
+}
+.tabs {
+    border-bottom: .2rem solid transparent;
+}
+.tabs.active {
+    border-bottom: .2rem solid var(--prime);
+}
+.container {
+    max-width: 93%;
+    margin-inline: auto;
+}
+.logo span {
+    color: var(--prime);
+}
+.btn {
+    cursor: pointer;
+    transition: all .3s ease;
+    border-radius: .5rem;
+}
+.btn.dark {
+    background-color: var(--prime);
+}
+.btn.light {
+    border: 1px solid var(--prime);
+}
+.btn.light:hover {
+    background-color: var(--prime);
+    color: white;
+}
+.btn:hover {
+    color: var(--prime);
+    transform: scale(1.1);
+}
+.btn.dark:hover {
+    color: white;
+}
+/* .card:hover {
+    background-color: var(--prime);
+} */
+.text-between-lines {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .text-between-lines::before,
+  .text-between-lines::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid rgb(180, 180, 180);
+  }
+  .text-between-lines::before {
+    margin-right: 0.5em;
+  }
+  .text-between-lines::after {
+    margin-left: 0.5em;
+  }
+.ico {
+    border-color: var(--prime);
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.ico:hover {
+    background-color: var(--light-prime);
+}
+.nav_link {
+    border-top: .2rem solid transparent;
+    border-bottom: .2rem solid transparent;
+}
+.nav_link.active {
+    border-bottom: .2rem solid var(--prime);
+}
+.adelay {
+    transition: all .3s ease;
+}
+.shadow {
+    box-shadow: 0px 4px 16px 0px #8DD3BB26;
+}
+.shade {
+    box-shadow: 0px 4px 16px 0px #1122110D;
+}
+.shadow_2 {
+    box-shadow: 20px 20px 1px 10px var(--light-prime);
+}
+.shadow_3 {
+    box-shadow: 2px 4px 16px 0px #1122111A;
+}
+.Header {
+    margin-bottom: 10em;
+}
+.footer_block {
+    background-color: var(--light-prime);
+}
+.footer {
+    background-color: var(--prime);
+}
