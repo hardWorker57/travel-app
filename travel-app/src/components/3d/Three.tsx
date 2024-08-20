@@ -29,23 +29,23 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
-// import { EffectComposer, Bloom } from '@react-three/postprocessing';
+import { EffectComposer, Bloom } from '@react-three/postprocessing';
 import Earth from './materials/Earth';
-// import Particles from './materials/Particles';
+import Particles from './materials/Particles';
 
 const Three: React.FC = () => {
   return (
-    <Canvas camera={{ position: [5, 5, 5], fov: 75 }}>
+    <Canvas camera={{ position: [5, 5, 5], fov: 75 }} className='bg-black'>
       <ambientLight intensity={3.8} />
       <pointLight position={[10, 10, 10]}  />
       <Earth />
-      {/* <Particles /> */}
+      <Particles />
       <OrbitControls />
-      {/* <Stars /> */}
+      <Stars />
 
-      {/* <EffectComposer>
+      <EffectComposer>
         <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} height={300} />
-      </EffectComposer> */}
+      </EffectComposer>
     </Canvas>
   );
 };
