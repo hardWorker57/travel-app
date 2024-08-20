@@ -3,6 +3,7 @@ import { FaPlane } from "react-icons/fa";
 import { IoBedSharp } from "react-icons/io5";
 import Header_block from './Header_block';
 import { PiPlanet } from "react-icons/pi";
+import FadeDown from '../ui/animations/FadeDown';
 
 type Props = {}
 
@@ -11,13 +12,21 @@ const Header = (props: Props) => {
     <div className='Header pb-96 h-screen relative text-white'>
       <div className='pt-12 flex items-center justify-between container mx-auto'>
         <div className="flex items-center gap-x-8 text-lg">
-          <NavLink to='flights' className='flex gap-x-1 items-center'><FaPlane /> Find Flight</NavLink>
-          <NavLink to='stays' className='flex gap-x-1 items-center'><IoBedSharp /> Find Stays</NavLink>
+          <FadeDown delay={.1}>
+            <NavLink to='flights' className='flex gap-x-1 items-center'><FaPlane /> Find Flight</NavLink>
+          </FadeDown>
+          <FadeDown delay={.3}>
+            <NavLink to='stays' className='flex gap-x-1 items-center'><IoBedSharp /> Find Stays</NavLink>
+          </FadeDown>
         </div>
         <Link to='/' className="text-4xl flex items-center logo">g<span><PiPlanet /></span>lobe</Link>
         <div className="auth flex">
-          <Link to='logIn' className="text-lg py-2.5 px-6">Login</Link>
-          <Link to='signUp' className="text-lg py-2.5 px-6 bg-green-400 rounded-lg">Sign up</Link>
+          <FadeDown delay={.4}>
+            <Link to='logIn' className="text-lg py-2.5 px-6">Login</Link>
+          </FadeDown>
+          <FadeDown delay={.5}>
+            <Link to='signUp' className="text-lg py-2.5 px-6 bg-green-400 rounded-lg">Sign up</Link>
+          </FadeDown>
         </div>
       </div>
       <div className="flex flex-col items-center pt-24 gap-y-4">

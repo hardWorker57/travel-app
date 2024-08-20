@@ -10,15 +10,18 @@ import Header from './components/header/Header'
 import LogIn from './components/pages/auth/LogIn'
 import 'swiper/css';
 import ForgotPassword from './components/pages/auth/ForgotPassword'
-import Three from './components/3d/Three'
-import Counter from './components/counter/Counter'
+import gsap from 'gsap'
+import _ScrollTrigger from 'gsap/ScrollTrigger'
+// import Three from './components/3d/Three'
+// import Counter from './components/counter/Counter'
+gsap.registerPlugin(_ScrollTrigger);
 
 function App() {
 
   return (
     <div className='text-xs lg:text-sm'>
-      <Three/>
-      <Counter/>
+      {/* <Three/>
+      <Counter/> */}
       <Routes>
         <Route path='/' element={<Header_main />} />
         <Route path='*' element={<Header />} />
